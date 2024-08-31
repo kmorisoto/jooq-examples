@@ -43,3 +43,8 @@ jooq {
 sourceSets.main {
     java.srcDirs("build/generated-sources/jooq")
 }
+
+// https://www.jooq.org/doc/latest/manual/code-generation/codegen-gradle/codegen-gradle-compiler-dependency/
+tasks.named("compileKotlin") {
+    dependsOn(tasks.named("jooqCodegen"))
+}
