@@ -11,10 +11,10 @@ repositories {
 }
 
 dependencies {
-    implementation("org.jooq:jooq")
-    implementation("org.jooq:jooq-meta")
-    implementation("org.jooq:jooq-codegen")
-    implementation("org.jooq:jooq-postgres-extensions")
+    implementation("org.jooq:jooq:3.19.11")
+    implementation("org.jooq:jooq-meta:3.19.11")
+    implementation("org.jooq:jooq-codegen:3.19.11")
+    implementation("org.jooq:jooq-postgres-extensions:3.19.11")
 
     runtimeOnly("org.postgresql:postgresql:42.7.4")
     jooqCodegen("org.postgresql:postgresql:42.7.4")
@@ -29,11 +29,9 @@ kotlin {
     jvmToolchain(21)
 }
 
-
 jooq {
     configuration {
 
-        // Configure the database connection here
         jdbc {
             driver = "org.postgresql.Driver"
             url = "jdbc:postgresql://localhost:5432/postgres"
@@ -53,4 +51,8 @@ jooq {
             }
         }
     }
+}
+
+sourceSets.main {
+    java.srcDirs("build/generated-src/jooq/main")
 }
