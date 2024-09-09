@@ -1,7 +1,4 @@
 buildscript {
-    repositories {
-        mavenCentral()
-    }
     dependencies {
         classpath("org.flywaydb:flyway-database-postgresql:10.10.0")
     }
