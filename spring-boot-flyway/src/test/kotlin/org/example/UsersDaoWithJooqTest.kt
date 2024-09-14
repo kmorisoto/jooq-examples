@@ -7,11 +7,13 @@ import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.jooq.JooqTest
 import org.springframework.context.annotation.Import
+import org.springframework.test.context.jdbc.Sql
 import kotlin.test.assertNotNull
 
 @JooqTest
 // Importしないと失敗する
 @Import(UsersDao::class)
+@Sql("/test-data.sql")
 class UsersDaoWithJooqTest {
 
     @Autowired
