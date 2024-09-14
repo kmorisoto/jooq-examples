@@ -9,7 +9,7 @@ plugins {
     kotlin("plugin.spring") version "1.9.25"
     id("org.springframework.boot") version "3.3.3"
     id("io.spring.dependency-management") version "1.1.6"
-    id("org.jooq.jooq-codegen-gradle") version  "3.19.11"
+    id("org.jooq.jooq-codegen-gradle") version "3.19.11"
     id("org.flywaydb.flyway") version "10.10.0"
 }
 
@@ -72,6 +72,12 @@ jooq {
 
             target {
                 packageName = "org.example.db"
+            }
+
+            generate {
+                isImmutablePojos = true
+                isSpringAnnotations = true
+                isDaos = true
             }
         }
     }
