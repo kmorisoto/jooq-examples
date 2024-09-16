@@ -40,6 +40,10 @@ dependencies {
     implementation("org.jooq:jooq-codegen")
     implementation("org.jooq:jooq-postgres-extensions:${dependencyManagement.managedVersions["org.jooq:jooq"]}")
     jooqCodegen("org.postgresql:postgresql:${dependencyManagement.managedVersions["org.postgresql:postgresql"]}")
+
+    testImplementation("org.springframework.boot:spring-boot-testcontainers")
+    testImplementation("org.testcontainers:junit-jupiter")
+    testImplementation("org.testcontainers:postgresql")
 }
 
 kotlin {

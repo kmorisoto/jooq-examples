@@ -12,7 +12,7 @@ import kotlin.test.assertNotNull
 
 @JooqTest
 // Importしないと失敗する
-@Import(UsersDao::class)
+@Import(UsersDao::class, TestcontainersConfiguration::class)
 @Sql("/test-data.sql")
 class UsersDaoWithJooqTest {
 
@@ -21,6 +21,7 @@ class UsersDaoWithJooqTest {
 
     @Test
     fun findOne() {
+
         val actual = usersDao.findById(1)
 
         assertNotNull(actual)
