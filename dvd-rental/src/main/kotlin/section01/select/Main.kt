@@ -1,5 +1,6 @@
 package org.example.section01.select
 
+// https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-select/
 fun main() {
     S01().run()
     S02().run()
