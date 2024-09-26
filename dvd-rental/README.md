@@ -1,3 +1,6 @@
+https://www.postgresqltutorial.com/
+
+
 dvdrental.zipをダウンロード
 
 https://www.postgresqltutorial.com/postgresql-getting-started/postgresql-sample-database/
