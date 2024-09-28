@@ -1,6 +1,6 @@
 package org.example.section01.sub03
 
-// https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-column-alias/
+// https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-order-by/
 fun main() {
     S01().run()
     S02().run()
