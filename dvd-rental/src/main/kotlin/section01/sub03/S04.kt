@@ -3,19 +3,20 @@ package org.example.section01.sub03
 import org.example.DBCase
 import org.example.db.tables.references.CUSTOMER
 import org.jooq.DSLContext
+import org.jooq.impl.DSL
 
-class S01 : DBCase() {
+class S04 : DBCase() {
     // SELECT
     //  first_name,
-    //  last_name
+    //  LENGTH(first_name) len
     //FROM
     //  customer
     //ORDER BY
-    //  first_name ASC;
+    //  len DESC;
     override fun sql(ctx: DSLContext) {
-        ctx.select(CUSTOMER.FIRST_NAME, CUSTOMER.LAST_NAME)
+        ctx.select(CUSTOMER.FIRST_NAME, DSL.length(CUSTOMER.FIRST_NAME).`as`("len"))
             .from(CUSTOMER)
-            .orderBy(CUSTOMER.FIRST_NAME.asc())
+            .orderBy(DSL.field("len").desc())
             .fetch()
             .forEach { println(it) }
     }
