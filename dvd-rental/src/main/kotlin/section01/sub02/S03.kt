@@ -1,4 +1,4 @@
-package org.example.section01.alias
+package org.example.section01.sub02
 
 import org.example.DBCase
 import org.example.db.tables.references.CUSTOMER

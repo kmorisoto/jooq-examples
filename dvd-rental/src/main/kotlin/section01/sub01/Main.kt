@@ -1,4 +1,4 @@
-package org.example.section01.select
+package org.example.section01.sub01
 
 // https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-select/
 fun main() {

@@ -1,4 +1,4 @@
-package org.example.section01.alias
+package org.example.section01.sub02
 
 // https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-column-alias/
 fun main() {
