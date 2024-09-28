@@ -5,7 +5,7 @@ import org.example.db.tables.references.CUSTOMER
 import org.jooq.DSLContext
 import org.jooq.impl.DSL
 
-class A02 : DBCase() {
+class S02 : DBCase() {
     // SELECT
     //    first_name || ' ' || last_name AS full_name
     //FROM
