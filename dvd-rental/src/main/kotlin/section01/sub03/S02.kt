@@ -17,6 +17,6 @@ class S02 : DBCase() {
             .from(CUSTOMER)
             .orderBy(CUSTOMER.LAST_NAME.desc())
             .fetch()
-            .forEach { println(it) }
+            .also { println(it) }
     }
 }

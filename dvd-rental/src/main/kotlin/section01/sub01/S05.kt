@@ -9,6 +9,6 @@ class S05 : DBCase() {
         // SELECT NOW();
         ctx.select(DSL.now())
             .fetch()
-            .forEach { println(it) }
+            .also { println(it) }
     }
 }

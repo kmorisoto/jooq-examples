@@ -18,6 +18,6 @@ class S04 : DBCase() {
             .from(CUSTOMER)
             .orderBy(DSL.field("len").desc())
             .fetch()
-            .forEach { println(it) }
+            .also { println(it) }
     }
 }

@@ -16,6 +16,6 @@ class S03 : DBCase() {
             .from(FILM)
             .orderBy(FILM.RENTAL_RATE.asc())
             .fetch()
-            .forEach { println(it) }
+            .also { println(it) }
     }
 }

@@ -9,6 +9,6 @@ class S03 : DBCase() {
         // SELECT * FROM customer;
         ctx.selectFrom(CUSTOMER)
             .fetch()
-            .forEach { println(it) }
+            .also { println(it) }
     }
 }

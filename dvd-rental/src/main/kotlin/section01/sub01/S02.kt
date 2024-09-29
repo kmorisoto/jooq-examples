@@ -15,6 +15,6 @@ class S02 : DBCase() {
         ctx.select(CUSTOMER.FIRST_NAME, CUSTOMER.LAST_NAME, CUSTOMER.EMAIL)
             .from(CUSTOMER)
             .fetch()
-            .forEach { println(it) }
+            .also { println(it) }
     }
 }

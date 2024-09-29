@@ -16,6 +16,6 @@ class S01 : DBCase() {
             .from(COLORS)
             .orderBy(COLORS.BCOLOR.asc())
             .fetch()
-            .forEach { println(it) }
+            .also { println(it) }
     }
 }

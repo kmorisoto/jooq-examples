@@ -14,6 +14,6 @@ class S02 : DBCase() {
         ctx.select(DSL.concat(CUSTOMER.FIRST_NAME, DSL.`val`(" "), CUSTOMER.LAST_NAME).`as`("full_name"))
             .from(CUSTOMER)
             .fetch()
-            .forEach { println(it) }
+            .also { println(it) }
     }
 }
